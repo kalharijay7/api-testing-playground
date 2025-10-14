@@ -23,17 +23,17 @@ api-testing-playground/
 │
 ├── README.md
 ├── docs/
-│ └── week1/
+│ └── phase1/
 │ └── api-basics-with-examples.md # API fundamentals with ReqRes examples
 │
 ├── collections/
-│ └── week1/
+│ └── phase1/
 │ ├── reqres-playground.postman_collection.json
 │ ├── trello-api-auth.postman_collection.json
 │ └── environment.postman_environment.json
 │
 ├── reports/
-│ └── week1/
+│ └── phase1/
 │ └── newman-report.html
 │
 └── .gitignore

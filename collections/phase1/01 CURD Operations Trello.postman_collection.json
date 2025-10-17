@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "d5256576-830b-4cbf-b4ca-7470e6a75823",
+		"name": "01 CURD Operations - Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10829026",
+		"_collection_link": "https://www.postman.com/kalharijay/workspace/api-testing-playground/collection/10829026-d5256576-830b-4cbf-b4ca-7470e6a75823?action=share&source=collection_link&creator=10829026"
+	},
+	"item": [
+		{
+			"name": "Get Card's all Actions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/EiEEKS3F/actions?key={{vault:trelloAPIKey}}&token={{vault:trelloToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"EiEEKS3F",
+						"actions"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{vault:trelloAPIKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{vault:trelloToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Card Comment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/actions/68f0821278189582fcd22003/text?value=The comment is updated&key={{vault:trelloAPIKey}}&token={{vault:trelloToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"actions",
+						"68f0821278189582fcd22003",
+						"text"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "The comment is updated"
+						},
+						{
+							"key": "key",
+							"value": "{{vault:trelloAPIKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{vault:trelloToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Emojis List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/emoji?key={{vault:trelloAPIKey}}&token={{vault:trelloToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"emoji"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{vault:trelloAPIKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{vault:trelloToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Emoji to a Comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shortName\": \"grinning\",\r\n    \"skinVariation\" : null,\r\n    \"native\": \"😀\",\r\n    \"unified\": \"1F600\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/actions/68f0821278189582fcd22003/reactions?key={{vault:trelloAPIKey}}&token={{vault:trelloToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"actions",
+						"68f0821278189582fcd22003",
+						"reactions"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{vault:trelloAPIKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{vault:trelloToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update showSidebarActivity Pref on a Board",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/iWMGRfFY/myPrefs/showSidebarActivity?key={{vault:trelloAPIKey}}&token={{vault:trelloToken}}&value=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"iWMGRfFY",
+						"myPrefs",
+						"showSidebarActivity"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{vault:trelloAPIKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{vault:trelloToken}}"
+						},
+						{
+							"key": "value",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Card",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/cPnicg9t?key={{vault:trelloAPIKey}}&token={{vault:trelloToken}}&value=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"cPnicg9t"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{vault:trelloAPIKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{vault:trelloToken}}"
+						},
+						{
+							"key": "value",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
